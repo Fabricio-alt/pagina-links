@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="img/logo.png" alt="logo">
+        <h1 class="titulo">Bem-Vindo a Adsa Jd. Paris</h1>
+        <h3 class="subtitulo">Um lugar de gente feliz!</h3>
+        <!-- <img class="seta" src="img/seta-baixo.png" alt="seta para baixo"> -->
+        <div class="botoes">
+  <div class="grid-links">
+    <a href="">
+      <div class="link whats">
+        <img src="img/WhatsApp.png" alt="icone">
+      <div class="desc">
+      <h2>Nosso WhatsApp</h2>
+      <p>Abra seu coração. Estamos a<br>
+          uma mensagem de distância!</p>
+      </div>
+      </div>
+    </a>
+    <a href="https://maps.app.goo.gl/JrEBuLeB8UEczhR2A" target="_blank">
+      <div class="link local">
+        <img src="img/localizacao.png" alt="icone">
+      <div class="desc">
+      <h2>Onde Estamos?</h2>
+      <p>Localize a sede e venha viver<br>
+        um tempo de comunhão!</p>
+      </div>
+      </div>
+    </a>
+    <a href="https://m.uber.com/ul/?action=setPickup&dropoff[formatted_address]=Rua+Adão+Costa+Mendes,+104" target="_blank"">
+      <div class="link uber">
+        <img src="img/uber.png" alt="icone">
+       <div class="desc">
+      <h2>Precisa de Uber?</h2>
+      <p>Chegue com facilidade —<br> 
+        peça um Uber até nossa sede.</p>
+      </div>
+      </div>
+    </a>
+    <a href="https://adsabrasil2.org.br/" target="_blank">
+      <div class="link site">
+        <img src="img/site.png" alt="icone">
+      <div class="desc">
+      <h2>Site do Ministério</h2>
+      <p>Conheça mais sobre nossa <br>
+        visão, projetos e eventos.</p>
+      </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Botão centralizado abaixo -->
+  <a href="https://www.youtube.com/c/ADSABrasilTV" target="_blank">
+    <div class="link link-5 youtube">
+      <img src="img/Youtube.png" alt="icone">
+      <div class="desc">
+      <h2>Canal da Matriz</h2>
+      <p>Alimente sua fé com mensagens <br>
+ que transformam vidas.</p>
+      </div>
+    </div>
+  </a>
+</div>    
+        <div class="compartilhar shareBtn">
+            <img src="img/compartilhar.png" alt="icone de compartilhar">
+            <p>Compartilhar link</p>
+        </div>
+    </div>
+    <footer>
+        <p class="versiculo">"Oh! Quão bom e quão suave é que os irmãos vivam em união"</p>
+        <h3 class="livro">Salmos 133:1</h3>
+        </footer>
+        
+  <script>
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: document.title,
+            text: 'Confira esta página!',
+            url: window.location.href
+          });
+          console.log('Compartilhamento bem-sucedido!');
+        } catch (error) {
+          console.error('Erro ao compartilhar:', error);
+        }
+      } else {
+        alert('O compartilhamento não é suportado neste navegador.');
+      }
+    });
+  </script>
+</body>
+</html>
